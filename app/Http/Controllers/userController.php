@@ -14,7 +14,7 @@ class userController extends Controller
         $registrasi->username = $request->username;
         $registrasi->nik = $request->nik;
         $registrasi->email = $request->email;
-        $registrasi->password = $request->password;
+        $registrasi->password = md5($request->password);
         $registrasi->save();
 
         return response()->json(['message' => 'berhasil']);
@@ -22,7 +22,7 @@ class userController extends Controller
 
     public function login (loginRequest $request) {
         $username = $request->username;
-        $password = $request->password;
+        $password = md5($request->password);
         $user = User::where('username',$username)->first(); 
             
             if ($username == $user['username'] && $password == $user['password']) {

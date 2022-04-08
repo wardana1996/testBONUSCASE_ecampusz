@@ -42,13 +42,11 @@
                         @csrf
                         <div class="form-outline mb-4">
                             <label class="form-label" for="form3Example3">Username</label>
-                            <input type="text" name="username" id="username" class="form-control form-control-lg" placeholder="username" />
-                            <span class="text-danger small" id="usernameerror"></span>
+                            <input type="text" name="username" id="username" class="form-control form-control-lg" placeholder="username" required/>
                         </div>
                         <div class="form-outline mb-3">
                             <label class="form-label" for="form3Example4">Password</label>
-                            <input type="password" name="password" id="password" class="form-control form-control-lg" placeholder="password" />
-                            <span class="text-danger small" id="passworderror"></span>
+                            <input type="password" name="password" id="password" class="form-control form-control-lg" placeholder="password" required/>
                         </div>
                         <a href="#!" class="text-body">Lupa Password ?</a>
                         <div class="text-center text-lg-start mt-4 pt-2">
